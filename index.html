@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fantasmeria - A World Beyond Dreams</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #d8e8ff, #ffe4f3);
+      margin: 0;
+      padding: 20px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    canvas#particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    h1 {
+      text-align: center;
+      color: #3c0066;
+    }
+
+    .card {
+      background: #ffffffdd;
+      margin: 20px auto;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      margin: 0;
+      font-size: 1.4em;
+      color: #0077b6;
+    }
+
+    .content {
+      display: none;
+      margin-top: 15px;
+      padding-top: 10px;
+      border-top: 1px solid #ddd;
+      color: #444;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .emoji {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌀 Fantasmeria - A World Beyond Dreams</h1>
+  <p style="text-align:center; max-width: 800px; margin: 0 auto;">
+    In Fantasmeria, you travel by drinking one drop of Zeroya Plant Juice. Once you close your eyes, you enter a magical world where everything you imagine becomes real. It is always safe. You feel happy, healthy, and free.
+  </p>
+
+  <div class="card" onclick="toggleContent(this)">
+    <h2><span class="emoji">🚀</span>Transportation</h2>
+    <div class="content">To go to Fantasmeria, you only need one drop of Zeroya Juice. This juice comes from a very rare plant. It grows only once a year. After drinking it, close your eyes, and your adventure begins.</div>
+  </div>
+
+  <div class="card" onclick="toggleContent(this)">
+    <h2><span class="emoji">🌌</span>Imagination-Based Reality</h2>
+    <div class="content">In Fantasmeria, everything you think becomes real. You can fly, swim in the sky, or visit planets. Even if something does not exist in the real world, it can be real here. Your dreams have no limits.</div>
+  </div>
+
+  <div class="card" onclick="toggleContent(this)">
+    <h2><span class="emoji">🧚‍♀️</span>Safe and Magical</h2>
+    <div class="content">This world is 100% safe. No one can get hurt. There is no pain, no fear, and no death. Even if you try dangerous things, nothing bad can happen. You can enjoy everything without worry.</div>
+  </div>
+
+  <div class="card" onclick="toggleContent(this)">
+    <h2><span class="emoji">🥘</span>Food</h2>
+    <div class="content">You can eat anything you imagine—big cakes, spicy dishes, or sweet fruits. You never gain weight. You never feel sick. The food gives you energy and always tastes perfect.</div>
+  </div>
+
+  <div class="card" onclick="toggleContent(this)">
+    <h2><span class="emoji">🌠</span>Activities and Stay</h2>
+    <div class="content">You can sleep in a floating house, swim in a glowing lake, or dance with stars. All activities and places to stay are made by your imagination. You live your dream life here.</div>
+  </div>
+
+  <div class="card" onclick="toggleContent(this)">
+    <h2>👑 5-Day Fantasmeria Journey</h2>
+    <div class="content">
+      <strong>Day 1 – Enter the Dreamland</strong><br>
+      Transport: Drink Zeroya juice and close your eyes<br>
+      Activity: Create your dream place<br>
+      Food: The first food you imagine appears<br>
+      Sleep: In your personalized dream room<br><br>
+      <strong>Day 2 – Dream Park</strong><br>
+      Activity: Jump on magical lakes, fly with colors<br>
+      Food: From your childhood dreams<br>
+      Sleep: In a starry sky swing<br><br>
+      <strong>Day 3 – Silent Garden</strong><br>
+      Activity: Breathe, reflect, and listen to your heart<br>
+      Food: Your thoughts become sweets<br>
+      Sleep: In a glowing flower tent<br><br>
+      <strong>Day 4 – Memory Tunnel</strong><br>
+      Activity: Relive forgotten dreams<br>
+      Food: Memory tastes—each with emotion<br>
+      Sleep: Surrounded by starlight<br><br>
+      <strong>Day 5 – Wish Gate</strong><br>
+      Activity: Write your dream in the Dream Book<br>
+      Leave one wish—it will live on in Fantasmeria<br>
+      Return: Close your eyes and breathe… you’re home
+    </div>
+  </div>
+
+  <div class="card" onclick="toggleContent(this)">
+    <h2>📘 Frequently Asked Questions</h2>
+    <div class="content">
+      <strong>How do I enter Fantasmeria?</strong><br/>
+      Drink one drop of Zeroya Juice. Close your eyes. You are there.<br/><br/>
+      <strong>Can I visit anytime?</strong><br/>
+      Yes. If you have Zeroya Juice, you can go again and again.<br/><br/>
+      <strong>Can I bring things back?</strong><br/>
+      No. Fantasmeria is only in your mind. You feel the magic, but you cannot take it with you.<br/><br/>
+      <strong>Are there any dangers?</strong><br/>
+      No. Everything is safe. No one can be hurt, sad, or scared.
+    </div>
+  </div>
+
+  <script>
+    function toggleContent(element) {
+      const content = element.querySelector('.content');
+      if (content.style.display === 'block') {
+        content.style.display = 'none';
+      } else {
+        content.style.display = 'block';
+      }
+    }
+  </script>
+
+
+  <div class="card" onclick="toggleContent(this)">
+    <h2><span class="emoji">🎭</span> The Heart of Art and Music: Zefarina Valley</h2>
+    <div class="content">In Fantasmeria, art is not just for expression. It is also a way to communicate. Every year, the Whisper of Dreams Festival happens in Zefarina Valley. People turn their thoughts into pictures, music, and dance. The special part is: the brushes use emotions instead of normal paint. The stronger and purer the feeling, the brighter the color. Music is made with “wind strings,” which are invisible instruments floating in the air. Artists use only their souls to play them and create melodies.</div>
+  </div>
+
+  <div class="card" onclick="toggleContent(this)">
+    <h2><span class="emoji">🎇</span> Rituals and Special Days</h2>
+    <div class="content">The people of Fantasmeria are very close to nature and dreams. Every year, they celebrate a holy day called The Awakening of Zeroya. On this day, everyone writes their best dream on a paper and hangs it on the big Dream Tree. People believe that dreams touching the tree will come true one day. There is also a tradition called The Silence Ritual. On this day, nobody speaks for a whole day. They only use gestures and eye contact. This helps people listen to their own thoughts.</div>
+  </div>
+
+  <div class="card" onclick="toggleContent(this)">
+    <h2><span class="emoji">🏟️</span> Sports and Competitions</h2>
+    <div class="content">In Fantasmeria, sports are both physical and mental. The most popular sport is Zekaflux. In this game, two players use mind power to control a flying, shape-changing ball. It is like a mix of chess and quidditch. Another game is The Memory Maze. Players must find their way out of a changing maze using only their imagination and memories.</div>
+  </div>
+
+  <div class="card" onclick="toggleContent(this)">
+    <h2><span class="emoji">🏛️</span> Architecture and Homes</h2>
+    <div class="content">Homes in Fantasmeria are not normal buildings. Each home grows with its owner’s imagination. For example, if someone loves seashells, their house may look like a blue-green spiral with wave shapes. Homes act like living things: when sad, their windows fog up; when happy, flowers fall from the ceiling. The tallest building is The Awakening Tower. At night, it shines with the sky and shows parts of people’s dreams.</div>
+  </div>
+
+  <div class="card" onclick="toggleContent(this)">
+    <h2><span class="emoji">🧝‍♀️</span> Legends and Symbolic People</h2>
+    <div class="content">One of the oldest stories in Fantasmeria is about The Golden-Winged Dream Bird. People say this bird comes only when someone’s dream is strong enough to save another person’s life. Long ago, a little girl dreamed that no one should be lonely. Her dream connected all the people of Fantasmeria with telepathy. Since then, they could talk with their minds. In Fantasmeria, people respect dreams more than heroes.</div>
+  </div>
+
+  <div class="card" onclick="toggleContent(this)">
+    <h2><span class="emoji">✨</span> Language and Symbols</h2>
+    <div class="content">Fantasmeria’s language is called Zerotika. People speak it with voice and glowing signs. The letters also show emotions: the letter “A” means joy, and “R” means longing. When written, the words move a little — because in Fantasmeria, words are alive. The Fantasmeria flag shows the spiral leaf of the Zeroya plant, which means endless imagination.</div>
+  </div>
+
+
+<canvas id="particles"></canvas>
+<script>
+  const canvas = document.getElementById("particles");
+  const ctx = canvas.getContext("2d");
+  let width = canvas.width = window.innerWidth;
+  let height = canvas.height = window.innerHeight;
+
+  let particles = [];
+  for (let i = 0; i < 120; i++) {
+    particles.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      radius: Math.random() * 3 + 2,
+      speedX: (Math.random() - 0.5) * 0.3,
+      speedY: (Math.random() - 0.5) * 0.3,
+      opacity: Math.random() * 0.5 + 0.3
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, width, height);
+    for (let p of particles) {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255, 255, 255, ${p.opacity})`;
+      ctx.shadowBlur = 5;
+      ctx.shadowColor = "#ffffff";
+      ctx.fill();
+      p.x += p.speedX;
+      p.y += p.speedY;
+
+      if (p.x < 0 || p.x > width) p.speedX *= -1;
+      if (p.y < 0 || p.y > height) p.speedY *= -1;
+    }
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+  window.addEventListener('resize', () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  });
+</script>
+</body>
+</html>
+
